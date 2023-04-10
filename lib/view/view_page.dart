@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:stores/components/bottom_container_icon.dart';
+import 'package:stores/components/bottom_container_text.dart';
 import 'package:stores/components/class_bestseller_card.dart';
 import 'package:stores/components/class_main_banner.dart';
 import 'package:stores/components/class_open.dart';
@@ -173,6 +175,68 @@ class _ViewStoresState extends State<ViewStores> {
               ),
               const SizedBox(height: 16),
               const BestsellerCard(),
+              const Reklama(56, double.infinity),
+              const SizedBox(height: 495),
+              Container(
+                height: 375,
+                width: double.infinity,
+                color: const Color(0xff333333),
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    top: 26,
+                    left: 15.96,
+                    right: 11.96,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        'assets/images/stores.png',
+                      ),
+                      const SizedBox(height: 33),
+                      const Divider(
+                        color: Color(0xffB3B3B7),
+                      ),
+                      const SizedBox(height: 16),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: const [
+                          BottomContainerText('Маркетплейс'),
+                          BottomContainerIcon(Icons.expand_more),
+                        ],
+                      ),
+                      const SizedBox(height: 16),
+                      const Divider(
+                        color: Color(0xffB3B3B7),
+                      ),
+                      const SizedBox(height: 16),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: const [
+                          BottomContainerText('Маркетплейс'),
+                          BottomContainerIcon(Icons.expand_more),
+                        ],
+                      ),
+                      const SizedBox(height: 16),
+                      const Divider(
+                        color: Color(0xffB3B3B7),
+                      ),
+                      const SizedBox(height: 16),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: const [
+                          BottomContainerText('Маркетплейс'),
+                          BottomContainerIcon(Icons.expand_more),
+                        ],
+                      ),
+                      const SizedBox(height: 16),
+                      const Divider(
+                        color: Color(0xffB3B3B7),
+                      ),
+                    ],
+                  ),
+                ),
+              )
             ],
           ),
         ),
