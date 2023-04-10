@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Reklama extends StatelessWidget {
-  const Reklama({super.key, required this.sizeWidth, required this.sizeHeight});
-  final double sizeWidth;
-  final double sizeHeight;
+  const Reklama({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -11,8 +10,8 @@ class Reklama extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            width: sizeWidth,
-            height: sizeHeight,
+            width: double.infinity,
+            height: 56,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(12),

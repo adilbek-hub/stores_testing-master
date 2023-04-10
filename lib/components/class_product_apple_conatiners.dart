@@ -8,7 +8,7 @@ class ProductsAppleContainers extends StatelessWidget {
     return Center(
       child: SizedBox(
         height: 160,
-        width: double.infinity,
+        width: 350,
         child: RotatedBox(
           quarterTurns: 3,
           child: ListWheelScrollView(

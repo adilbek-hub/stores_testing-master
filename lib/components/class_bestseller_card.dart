@@ -7,11 +7,11 @@ class BestsellerCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 18),
       child: Column(
         children: [
           SizedBox(
-            height: 404,
+            height: 257,
             width: double.infinity,
             child: GridView.builder(
               shrinkWrap: true,

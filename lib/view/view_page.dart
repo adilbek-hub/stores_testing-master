@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:stores/components/bottom_container_icon.dart';
-import 'package:stores/components/bottom_container_text.dart';
-
 import 'package:stores/components/class_bestseller_card.dart';
 import 'package:stores/components/class_main_banner.dart';
 import 'package:stores/components/class_open.dart';
@@ -30,6 +27,14 @@ class _ViewStoresState extends State<ViewStores> {
   // Modeldeshuu
   final products = cards;
   final hits = items;
+  final List<Color> colors = [
+    Colors.red,
+    Colors.blue,
+    Colors.green,
+    Colors.orange,
+    Colors.purple,
+    Colors.blue,
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -125,140 +130,18 @@ class _ViewStoresState extends State<ViewStores> {
               // ХИТ ПРОДАЖ КАНТЕЙНЕРЫ
               const BestsellerCard(),
               // ХИТ Реклама баннер
-              const Reklama(
-                sizeWidth: double.infinity,
-                sizeHeight: 56,
-              ),
+              const Reklama(),
               const SizedBox(height: 22),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 17),
-                child: Text(
-                  AppTexts.appleProductsText,
-                  style: AppTextStyle.bestseller,
-                ),
+              const Text(
+                AppTexts.appleProductsText,
+                style: AppTextStyle.bestseller,
               ),
               const SizedBox(height: 16),
               const ProductsAppleContainers(),
               const SizedBox(height: 20),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 17),
-                child: Text(AppTexts.newText, style: AppTextStyle.forNew),
-              ),
-              const SizedBox(height: 16),
-
-              const Reklama(
-                sizeWidth: double.infinity,
-                sizeHeight: 56,
-              ),
-              const SizedBox(height: 22),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 17),
-                child:
-                    Text(AppTexts.allForKidsText, style: AppTextStyle.forNew),
-              ),
-              const SizedBox(height: 21),
-              ScrollProducts(products: products),
-              const SizedBox(height: 22),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 17),
-                child: Text(AppTexts.allFromXiaomi, style: AppTextStyle.forNew),
-              ),
+              const Text(AppTexts.newText, style: AppTextStyle.forNew),
               const SizedBox(height: 16),
               const BestsellerCard(),
-              const SizedBox(height: 5),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 17),
-                child: Text(AppTexts.allFromAdidas, style: AppTextStyle.forNew),
-              ),
-              const SizedBox(height: 16),
-              const ProductsAppleContainers(),
-              const SizedBox(height: 22),
-              const Reklama(
-                sizeWidth: double.infinity,
-                sizeHeight: 80,
-              ),
-              const SizedBox(height: 22),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 17),
-                child:
-                    Text(AppTexts.allMenClothing, style: AppTextStyle.forNew),
-              ),
-              const SizedBox(height: 21),
-              ScrollProducts(products: products),
-              const SizedBox(height: 25),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 17),
-                child:
-                    Text(AppTexts.hotDiscountText, style: AppTextStyle.forNew),
-              ),
-              const BestsellerCard(),
-              const Reklama(
-                sizeWidth: double.infinity,
-                sizeHeight: 56,
-              ),
-              const SizedBox(height: 495),
-              Container(
-                height: 375,
-                width: double.infinity,
-                decoration: const BoxDecoration(
-                  color: Color(0xff333333),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 20.04, right: 11.96),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const SizedBox(height: 26),
-                      /* Фигмадан СВЖ экспортту Программа окуган жок
-                      SvgPicture.asset('assets/images/stores.svg',
-                          width: 24, height: 29.2),
-                          */
-                      // Image.asset(
-                      //     'assets/images/stores brandbook white text 1svg.pdf'),
-                      Image.asset('assets/images/stores.png'),
-                      const SizedBox(height: 33),
-                      const Divider(color: Color(0xffB3B3B7)),
-                      const SizedBox(height: 16),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
-                          BottomContainerText(AppTexts.marketPlaceText),
-                          BottomContainerIcon(Icons.keyboard_arrow_down),
-                        ],
-                      ),
-                      const SizedBox(height: 16),
-                      const Divider(color: Color(0xffB3B3B7)),
-                      const SizedBox(height: 16),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
-                          BottomContainerText(AppTexts.marketPlaceText),
-                          BottomContainerIcon(Icons.keyboard_arrow_down),
-                        ],
-                      ),
-                      const SizedBox(height: 16),
-                      const Divider(color: Color(0xffB3B3B7)),
-                      const SizedBox(height: 16),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
-                          BottomContainerText(AppTexts.marketPlaceText),
-                          BottomContainerIcon(Icons.keyboard_arrow_down),
-                        ],
-                      ),
-                      const SizedBox(height: 16),
-                      const Divider(color: Color(0xffB3B3B7)),
-                      const SizedBox(height: 24),
-                      // Container(
-                      //   height: 33,
-                      //   width: double.infinity,
-                      //   color: Color(0xff474747),
-                      //   child: Image.asset('assets/images/app store 1.png'),
-                      // )
-                    ],
-                  ),
-                ),
-              )
             ],
           ),
         ),

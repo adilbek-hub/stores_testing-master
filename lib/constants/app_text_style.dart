@@ -51,10 +51,4 @@ class AppTextStyle {
     fontWeight: FontWeight.w600,
     fontFamily: 'Montserrat',
   );
-
-  static const marketPlaceStyle = TextStyle(
-      color: Color(0xfffafafa),
-      fontSize: 15,
-      fontWeight: FontWeight.w600,
-      fontFamily: 'Montserrat');
 }

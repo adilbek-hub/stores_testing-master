@@ -31,6 +31,14 @@ class ScrollContainer extends StatelessWidget {
                 width: double.infinity,
                 alignment: Alignment.topRight,
                 decoration: const BoxDecoration(
+                  // gradient: LinearGradient(
+                  //   begin: Alignment.topCenter,
+                  //   end: Alignment.bottomCenter,
+                  //   colors: [
+                  //     Color(0xffE6E8EC),
+                  //     Color(0xfff6f6f6),
+                  //   ],
+                  // ),
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(10),
                       topRight: Radius.circular(10)),
@@ -105,65 +113,51 @@ class ScrollContainer extends StatelessWidget {
                       ),
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          children: [
-                            Row(
-                              children: const [
-                                Text(
-                                  '3700',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w500,
-                                    fontFamily: 'Montserrat',
-                                    color: Color(0xffB3B3B7),
-                                    decoration: TextDecoration.lineThrough,
-                                  ),
-                                ),
-                                SizedBox(width: 2),
-                                Text(
-                                  'c',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w500,
-                                    fontFamily: 'Montserrat',
-                                    color: Color(0xffB3B3B7),
-                                    decoration: TextDecoration.underline,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Row(
-                              children: const [
-                                Text(
-                                  '3100',
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w600,
-                                    fontFamily: 'Montserrat',
-                                    color: AppColors.black,
-                                  ),
-                                ),
-                                SizedBox(width: 2),
-                                Text(
-                                  'c',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w600,
-                                    fontFamily: 'Montserrat',
-                                    color: AppColors.black,
-                                    decoration: TextDecoration.underline,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
+                      children: const [
+                        Text(
+                          '3700',
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: 'Montserrat',
+                            color: Color(0xffB3B3B7),
+                            decoration: TextDecoration.lineThrough,
+                          ),
                         ),
-                        const Icon(
-                          Icons.shopping_basket_rounded,
-                          size: 36,
-                          color: Color(0xffF58735),
+                        SizedBox(width: 2),
+                        Text(
+                          'c',
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: 'Montserrat',
+                            color: Color(0xffB3B3B7),
+                            decoration: TextDecoration.underline,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: const [
+                        Text(
+                          '3100',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                            fontFamily: 'Montserrat',
+                            color: AppColors.black,
+                          ),
+                        ),
+                        SizedBox(width: 2),
+                        Text(
+                          'c',
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            fontFamily: 'Montserrat',
+                            color: AppColors.black,
+                            decoration: TextDecoration.underline,
+                          ),
                         ),
                       ],
                     ),
