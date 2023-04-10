@@ -27,14 +27,6 @@ class _ViewStoresState extends State<ViewStores> {
   // Modeldeshuu
   final products = cards;
   final hits = items;
-  final List<Color> colors = [
-    Colors.red,
-    Colors.blue,
-    Colors.green,
-    Colors.orange,
-    Colors.purple,
-    Colors.blue,
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -130,16 +122,55 @@ class _ViewStoresState extends State<ViewStores> {
               // ХИТ ПРОДАЖ КАНТЕЙНЕРЫ
               const BestsellerCard(),
               // ХИТ Реклама баннер
-              const Reklama(),
+              const Reklama(56, double.infinity),
               const SizedBox(height: 22),
-              const Text(
-                AppTexts.appleProductsText,
-                style: AppTextStyle.bestseller,
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 17),
+                child: Text(
+                  AppTexts.appleProductsText,
+                  style: AppTextStyle.bestseller,
+                ),
               ),
               const SizedBox(height: 16),
               const ProductsAppleContainers(),
               const SizedBox(height: 20),
-              const Text(AppTexts.newText, style: AppTextStyle.forNew),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 17),
+                child: Text(AppTexts.newText, style: AppTextStyle.forNew),
+              ),
+              const SizedBox(height: 16),
+              const BestsellerCard(),
+              const Reklama(56, double.infinity),
+              const SizedBox(height: 22),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 17),
+                child: Text(AppTexts.productFromXiaomi,
+                    style: AppTextStyle.forNew),
+              ),
+              const SizedBox(height: 16),
+              const BestsellerCard(),
+              const SizedBox(height: 6),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 17),
+                child: Text(AppTexts.clousesFromAdidas,
+                    style: AppTextStyle.forNew),
+              ),
+              const SizedBox(height: 16),
+              const ProductsAppleContainers(),
+              const SizedBox(height: 22),
+              const Reklama(80, double.infinity),
+              const SizedBox(height: 22),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 17),
+                child: Text(AppTexts.menCloses, style: AppTextStyle.forNew),
+              ),
+              const SizedBox(height: 21),
+              ScrollProducts(products: products),
+              const SizedBox(height: 25),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 17),
+                child: Text(AppTexts.skidka, style: AppTextStyle.forNew),
+              ),
               const SizedBox(height: 16),
               const BestsellerCard(),
             ],

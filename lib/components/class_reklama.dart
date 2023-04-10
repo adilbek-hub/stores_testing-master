@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Reklama extends StatelessWidget {
-  const Reklama({super.key});
-
+  const Reklama(this.height, this.width, {super.key});
+  final double height;
+  final double width;
   @override
   Widget build(BuildContext context) {
     return Padding(

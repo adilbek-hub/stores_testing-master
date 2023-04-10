@@ -113,54 +113,67 @@ class ScrollContainer extends StatelessWidget {
                       ),
                     ),
                     Row(
-                      children: const [
-                        Text(
-                          '3700',
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500,
-                            fontFamily: 'Montserrat',
-                            color: Color(0xffB3B3B7),
-                            decoration: TextDecoration.lineThrough,
-                          ),
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          children: [
+                            Row(
+                              children: const [
+                                Text(
+                                  '3700',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                    fontFamily: 'Montserrat',
+                                    color: Color(0xffB3B3B7),
+                                    decoration: TextDecoration.lineThrough,
+                                  ),
+                                ),
+                                SizedBox(width: 2),
+                                Text(
+                                  'c',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                    fontFamily: 'Montserrat',
+                                    color: Color(0xffB3B3B7),
+                                    decoration: TextDecoration.underline,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: const [
+                                Text(
+                                  '3100',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600,
+                                    fontFamily: 'Montserrat',
+                                    color: AppColors.black,
+                                  ),
+                                ),
+                                SizedBox(width: 2),
+                                Text(
+                                  'c',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w600,
+                                    fontFamily: 'Montserrat',
+                                    color: AppColors.black,
+                                    decoration: TextDecoration.underline,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
-                        SizedBox(width: 2),
-                        Text(
-                          'c',
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500,
-                            fontFamily: 'Montserrat',
-                            color: Color(0xffB3B3B7),
-                            decoration: TextDecoration.underline,
-                          ),
+                        Icon(
+                          Icons.shopping_basket,
+                          color: Color(0xffF58735),
                         ),
                       ],
-                    ),
-                    Row(
-                      children: const [
-                        Text(
-                          '3100',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600,
-                            fontFamily: 'Montserrat',
-                            color: AppColors.black,
-                          ),
-                        ),
-                        SizedBox(width: 2),
-                        Text(
-                          'c',
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            fontFamily: 'Montserrat',
-                            color: AppColors.black,
-                            decoration: TextDecoration.underline,
-                          ),
-                        ),
-                      ],
-                    ),
+                    )
                   ],
                 ),
               ),

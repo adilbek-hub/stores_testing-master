@@ -6,5 +6,9 @@ class AppTexts {
   static const enterDeliveryAddressText = 'Укажите адрес доставки';
   static const bestsellerText = 'Хит продаж';
   static const appleProductsText = 'Продукты Apple';
-  static const newText = 'Продукты Apple';
+  static const newText = 'Новинки';
+  static const productFromXiaomi = 'Продукт от Xiaomi';
+  static const clousesFromAdidas = 'Одежды от Adidas';
+  static const menCloses = 'Мужская Одежда';
+  static const skidka = 'Горячие скидки';
 }
