@@ -3,6 +3,7 @@ import 'package:stores/components/bottom_container_icon.dart';
 import 'package:stores/components/bottom_container_text.dart';
 import 'package:stores/components/class_bestseller_card.dart';
 import 'package:stores/components/class_bottom_container.dart';
+import 'package:stores/components/class_bottom_nav_bar.dart';
 import 'package:stores/components/class_main_banner.dart';
 import 'package:stores/components/class_open.dart';
 import 'package:stores/components/class_product_apple_conatiners.dart';
@@ -27,6 +28,9 @@ class _ViewStoresState extends State<ViewStores> {
   final String _shape = 'assets/images/shape.png';
   final String _banner = 'assets/images/Баннер основной.png';
   final String _reklama = 'assets/images/Rectangle 230 (1).jpg';
+  final String _appStoreImage = 'assets/images/app store 1.png';
+  final String _googlePlayImage = 'assets/images/google play 1.png';
+  final String _storesImage = 'assets/images/stores.png';
   // Modeldeshuu
   final products = cards;
   final hits = items;
@@ -191,9 +195,7 @@ class _ViewStoresState extends State<ViewStores> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Image.asset(
-                        'assets/images/stores.png',
-                      ),
+                      Image.asset(_storesImage),
                       const SizedBox(height: 15),
                       const Divider(
                         color: Color(0xffB3B3B7),
@@ -202,7 +204,7 @@ class _ViewStoresState extends State<ViewStores> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: const [
-                          BottomContainerText('Маркетплейс'),
+                          BottomContainerText(AppTexts.marketPlaceText),
                           BottomContainerIcon(Icons.expand_more),
                         ],
                       ),
@@ -214,7 +216,7 @@ class _ViewStoresState extends State<ViewStores> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: const [
-                          BottomContainerText('Маркетплейс'),
+                          BottomContainerText(AppTexts.pokupatelText),
                           BottomContainerIcon(Icons.expand_more),
                         ],
                       ),
@@ -226,7 +228,7 @@ class _ViewStoresState extends State<ViewStores> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: const [
-                          BottomContainerText('Маркетплейс'),
+                          BottomContainerText(AppTexts.partneramText),
                           BottomContainerIcon(Icons.expand_more),
                         ],
                       ),
@@ -235,12 +237,12 @@ class _ViewStoresState extends State<ViewStores> {
                         color: Color(0xffB3B3B7),
                       ),
                       const SizedBox(height: 9),
-                      const BottomContainer(
-                        image: 'assets/images/app store 1.png',
+                      BottomContainer(
+                        image: _appStoreImage,
                       ),
                       const SizedBox(height: 10),
-                      const BottomContainer(
-                        image: 'assets/images/google play 1.png',
+                      BottomContainer(
+                        image: _googlePlayImage,
                       ),
                     ],
                   ),
@@ -251,48 +253,6 @@ class _ViewStoresState extends State<ViewStores> {
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class BottomNavBar extends StatelessWidget {
-  const BottomNavBar({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 80,
-      child: BottomNavigationBar(
-        selectedItemColor: const Color(0xffF58735),
-        unselectedItemColor: const Color(0xff666666),
-        items: const [
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
-              ),
-              label: 'Home'),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.view_cozy,
-            ),
-            label: 'Каталог',
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.qr_code,
-              ),
-              label: 'Мой QR'),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.shopping_basket,
-              ),
-              label: 'Корзина'),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.person,
-              ),
-              label: 'Профиль'),
-        ],
       ),
     );
   }

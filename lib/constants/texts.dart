@@ -11,4 +11,7 @@ class AppTexts {
   static const clousesFromAdidas = 'Одежды от Adidas';
   static const menCloses = 'Мужская Одежда';
   static const skidka = 'Горячие скидки';
+  static const marketPlaceText = 'Маркетплейс';
+  static const pokupatelText = 'Покупателю';
+  static const partneramText = 'Партнерам';
 }
