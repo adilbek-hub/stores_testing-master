@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:stores/components/bottom_container_icon.dart';
 import 'package:stores/components/bottom_container_text.dart';
 import 'package:stores/components/class_bestseller_card.dart';
+import 'package:stores/components/class_bottom_container.dart';
 import 'package:stores/components/class_main_banner.dart';
 import 'package:stores/components/class_open.dart';
 import 'package:stores/components/class_product_apple_conatiners.dart';
@@ -178,12 +179,12 @@ class _ViewStoresState extends State<ViewStores> {
               const Reklama(56, double.infinity),
               const SizedBox(height: 495),
               Container(
-                height: 375,
+                height: 380,
                 width: double.infinity,
                 color: const Color(0xff333333),
                 child: Padding(
                   padding: const EdgeInsets.only(
-                    top: 26,
+                    top: 18,
                     left: 15.96,
                     right: 11.96,
                   ),
@@ -193,11 +194,11 @@ class _ViewStoresState extends State<ViewStores> {
                       Image.asset(
                         'assets/images/stores.png',
                       ),
-                      const SizedBox(height: 33),
+                      const SizedBox(height: 15),
                       const Divider(
                         color: Color(0xffB3B3B7),
                       ),
-                      const SizedBox(height: 16),
+                      const SizedBox(height: 9),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: const [
@@ -205,11 +206,11 @@ class _ViewStoresState extends State<ViewStores> {
                           BottomContainerIcon(Icons.expand_more),
                         ],
                       ),
-                      const SizedBox(height: 16),
+                      const SizedBox(height: 9),
                       const Divider(
                         color: Color(0xffB3B3B7),
                       ),
-                      const SizedBox(height: 16),
+                      const SizedBox(height: 9),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: const [
@@ -217,11 +218,11 @@ class _ViewStoresState extends State<ViewStores> {
                           BottomContainerIcon(Icons.expand_more),
                         ],
                       ),
-                      const SizedBox(height: 16),
+                      const SizedBox(height: 9),
                       const Divider(
                         color: Color(0xffB3B3B7),
                       ),
-                      const SizedBox(height: 16),
+                      const SizedBox(height: 9),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: const [
@@ -229,17 +230,69 @@ class _ViewStoresState extends State<ViewStores> {
                           BottomContainerIcon(Icons.expand_more),
                         ],
                       ),
-                      const SizedBox(height: 16),
+                      const SizedBox(height: 9),
                       const Divider(
                         color: Color(0xffB3B3B7),
+                      ),
+                      const SizedBox(height: 9),
+                      const BottomContainer(
+                        image: 'assets/images/app store 1.png',
+                      ),
+                      const SizedBox(height: 10),
+                      const BottomContainer(
+                        image: 'assets/images/google play 1.png',
                       ),
                     ],
                   ),
                 ),
-              )
+              ),
+              const BottomNavBar(),
+              const SizedBox(height: 50),
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class BottomNavBar extends StatelessWidget {
+  const BottomNavBar({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 80,
+      child: BottomNavigationBar(
+        selectedItemColor: const Color(0xffF58735),
+        unselectedItemColor: const Color(0xff666666),
+        items: const [
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+              ),
+              label: 'Home'),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.view_cozy,
+            ),
+            label: 'Каталог',
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.qr_code,
+              ),
+              label: 'Мой QR'),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.shopping_basket,
+              ),
+              label: 'Корзина'),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.person,
+              ),
+              label: 'Профиль'),
+        ],
       ),
     );
   }
